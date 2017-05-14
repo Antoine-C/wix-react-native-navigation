@@ -64,6 +64,7 @@ export default class HeroScreen extends Component {
   }
 
   _renderIcon() {
+    console.log(`Height : ${this.state.height} Width : ${this.state.width}`);
     return (
       <SharedElementTransition
         sharedElementId={this.props.sharedIconId}
@@ -94,6 +95,7 @@ export default class HeroScreen extends Component {
       >
         <Image
           source={this.props.icon}
+          style={{height: this.state.height, width: this.state.width}}
           fadeDuration={0}
         />
       </SharedElementTransition>
